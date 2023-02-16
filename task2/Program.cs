@@ -8,9 +8,16 @@ double b1 = GetNumber("Введите значение b1: ");
 double k1 = GetNumber("Введите значение k1: ");
 double b2 = GetNumber("Введите значение b2: ");
 double k2 = GetNumber("Введите значение k2: ");
-double x = (b2-b1)/(k1-k2);
-double y = k1 * x + b1;
-Console.WriteLine($"Точка пересечения двух прямых ({x}; {y}).");
+if (k1==k2)
+{
+    Console.WriteLine("Прямые не пересекаются");
+}
+else
+{
+    double x = (b2-b1)/(k1-k2);
+    double y = k1 * x + b1;
+    Console.WriteLine($"Точка пересечения двух прямых ({x}; {y}).");
+}
 
 
 double GetNumber(string message)
